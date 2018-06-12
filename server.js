@@ -19,16 +19,13 @@ app.set("view engine", "handlebars");
 var db = mongoose.connection;
 
 
-
-
-
 var port = process.env.PORT || 3000
 
 // Database configuration
 var databaseUrl = "scraper";
 var collections = ["scrapedData"];
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
