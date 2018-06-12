@@ -7,6 +7,9 @@ var exphbs = require("express-handlebars");
 var path = require("path");
 var app = express();
 
+var Note = require("./models/Note.js");
+var Article = require("./models/article.js");
+
 
 
 app.engine("handlebars", exphbs({
