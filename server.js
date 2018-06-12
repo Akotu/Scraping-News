@@ -1,7 +1,6 @@
 // Dependencies
 var express = require("express");
 var mongoose = require("mongoose");
-// Require request and cheerio. This makes the scraping possible
 var request = require("request");
 var cheerio = require("cheerio");
 var exphbs = require("express-handlebars");
@@ -20,7 +19,7 @@ app.set("view engine", "handlebars");
 var db = mongoose.connection;
 
 
-// Initialize Express
+
 
 
 var port = process.env.PORT || 3000
@@ -48,7 +47,7 @@ db.on("error", function(error) {
   });
   
 
-// Listen on port 3000
+
 app.listen(port, function() {
   console.log("App running on port" + port);
 });
