@@ -28,7 +28,7 @@ var port = process.env.PORT || 3000
 var databaseUrl = "scraper";
 var collections = ["scrapedData"];
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
